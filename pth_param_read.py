@@ -9,7 +9,6 @@ args = parser.parse_args()
 
 
 print(args.pretrained)
-print(args.new)
 
 if args.pretrained:
     pretrained_net = torch.load(args.pretrained)
