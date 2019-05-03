@@ -5,7 +5,6 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-pretrained', '-p', type=str, required=False, help='Path to pretrained model.')
-parser.add_argument('-new', '-n', type=str, required=False, help='Path to new model.')
 args = parser.parse_args()
 
 
@@ -18,14 +17,6 @@ if args.pretrained:
 
 else:
     pretrained_net = torch.load('../../experiments/pretrained_models/RRDB_ESRGAN_x4.pth')
-    print("Loaded default RRDB_ESRGAN_x4.pth model")
-
-if args.new:
-    crt_net = torch.load(args.new)
-    print("Loaded model: " + args.new)
-
-else:
-    crt_net = torch.load('../../experiments/pretrained_models/RRDB_ESRGAN_x4.pth')
     print("Loaded default RRDB_ESRGAN_x4.pth model")
 
 layers_pretrain = []
