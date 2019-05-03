@@ -32,7 +32,6 @@ layers_pretrain = []
 
 for k, v in pretrained_net.items():
     layers_pretrain.append(k)
-    print(k)
 
 if 'model.3.weight' in layers_pretrain:
     if 'model.6.weight' in layers_pretrain:
